@@ -72,7 +72,7 @@ module "service_role" {
 
   # Override the default list of attached policies
   policy_arns  = []
-  policy_jsons = var.create ? [data.aws_iam_policy_document.service_role.json] : []
+  policy_jsons = var.create ? [data.aws_iam_policy_document.service_role[0].json] : []
 
   tags = var.tags
 }
