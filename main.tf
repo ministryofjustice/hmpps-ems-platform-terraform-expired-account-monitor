@@ -8,7 +8,7 @@ module "function" {
 
   function_name = "${var.name_prefix}-expired-account-monitor"
   description   = "List users that haven't logged in within the maximum allowed time limit"
-  handler       = "lambda_handler.handle_event"
+  handler       = "src/lambda_handler.handle_event"
   runtime       = "python3.11"
   timeout       = 30
 
@@ -16,8 +16,10 @@ module "function" {
   policy_json        = var.create ? data.aws_iam_policy_document.function[0].json : null
 
   source_path = [
-    "${path.module}/function/src",
-    "${path.module}/function/pyproject.toml"
+    {
+      path           = "${path.module}/function"
+      poetry_install = true
+    }
   ]
 
   tags = merge(
