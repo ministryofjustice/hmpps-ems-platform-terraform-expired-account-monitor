@@ -18,6 +18,7 @@ module "function" {
   source_path = [
     {
       path           = "${path.module}/function"
+      patterns = ["!tests/.*"]
       poetry_install = true
     }
   ]
