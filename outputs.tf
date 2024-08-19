@@ -5,5 +5,5 @@ output "lambda" {
 
 output "service_role" {
   description = "Attributes associated with the service role."
-  value = module.service_role
+  value       = module.service_role
 }
