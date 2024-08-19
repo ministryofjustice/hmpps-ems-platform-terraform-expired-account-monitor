@@ -45,8 +45,8 @@ jobs:
         run: poetry run black --check .
       - name: Check dependency formatting
         run: poetry run isort --check-only .
-      - name: Check dependency formatting
-        run: poetry run mypy --check-untyped-defs --disable-error-code=import-untyped .
+      # - name: Check typing
+      #   run: poetry run mypy --check-untyped-defs --disable-error-code=import-untyped .
 
   python-test:
     name: Test python

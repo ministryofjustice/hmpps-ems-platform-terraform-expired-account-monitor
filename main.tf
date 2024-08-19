@@ -74,5 +74,5 @@ module "service_role" {
   policy_arns  = []
   policy_jsons = var.create ? [data.aws_iam_policy_document.service_role.json] : []
 
-  tags = local.tags
+  tags = var.tags
 }
