@@ -31,7 +31,7 @@ No requirements.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_function"></a> [function](#module\_function) | terraform-aws-modules/lambda/aws | 7.7.1 |
+| <a name="module_function"></a> [function](#module\_function) | terraform-aws-modules/lambda/aws | 7.8.1 |
 | <a name="module_service_role"></a> [service\_role](#module\_service\_role) | github.com/ministryofjustice/modernisation-platform-github-oidc-role | v3.2.0 |
 
 ## Resources
