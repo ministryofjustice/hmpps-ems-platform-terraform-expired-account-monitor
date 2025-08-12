@@ -1,6 +1,6 @@
 module "function" {
   source  = "terraform-aws-modules/lambda/aws"
-  version = "7.21.0"
+  version = "8.0.1"
 
   create_function = var.create
   create_package  = var.create_package
@@ -68,7 +68,7 @@ data "aws_iam_policy_document" "service_role" {
 module "service_role" {
   count = var.create ? 1 : 0
 
-  source = "github.com/ministryofjustice/modernisation-platform-github-oidc-role?ref=v3.2.0"
+  source = "github.com/ministryofjustice/modernisation-platform-github-oidc-role?ref=v4.0.0"
 
   github_repositories = var.allowed_github_repositories
   role_name           = "${var.name_prefix}-expired-account-deleter-service-role"
