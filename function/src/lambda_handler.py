@@ -2,8 +2,7 @@ import boto3
 from aws_lambda_powertools import Logger
 
 from src.app.config import Config
-from src.app.helpers import (account_deletion_date_reached,
-                             get_credential_report)
+from src.app.helpers import account_deletion_date_reached, get_credential_report
 
 iam_client = boto3.client("iam")
 logger = Logger(service="APP")
